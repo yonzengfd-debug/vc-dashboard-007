@@ -1,0 +1,40 @@
+date,product,channel,orders,revenue,cost,visitors,customers
+2026-02-24,AI Course,Facebook Ads,8,2400,1200,620,8
+2026-02-24,AI Course,Google Ads,6,1800,900,420,6
+2026-02-24,AI Toolkit,Direct,4,600,150,90,4
+2026-02-25,AI Course,Facebook Ads,7,2100,1200,590,7
+2026-02-25,AI Course,Google Ads,5,1500,900,380,5
+2026-02-25,AI Toolkit,Direct,5,750,200,110,5
+2026-02-26,AI Course,Facebook Ads,9,2700,1200,680,9
+2026-02-26,AI Course,Google Ads,6,1800,900,450,6
+2026-02-26,AI Toolkit,Direct,6,900,220,130,6
+2026-02-27,AI Course,Facebook Ads,10,3000,1200,720,10
+2026-02-27,AI Course,Google Ads,7,2100,900,500,7
+2026-02-27,AI Toolkit,Direct,7,1050,230,140,7
+2026-02-28,AI Course,Facebook Ads,14,4200,1500,950,14
+2026-02-28,AI Course,Google Ads,10,3000,1100,680,10
+2026-02-28,AI Toolkit,Direct,12,1800,350,260,12
+2026-03-01,AI Course,Facebook Ads,16,4800,1500,1050,16
+2026-03-01,AI Course,Google Ads,12,3600,1100,720,12
+2026-03-01,AI Toolkit,Direct,14,2100,380,290,14
+2026-03-02,AI Course,Facebook Ads,11,3300,1500,780,11
+2026-03-02,AI Course,Google Ads,8,2400,1100,540,8
+2026-03-02,AI Toolkit,Direct,10,1500,300,210,10
+2026-03-03,AI Course,Facebook Ads,7,2100,1500,600,7
+2026-03-03,AI Course,Google Ads,5,1500,1100,420,5
+2026-03-03,AI Toolkit,Direct,9,1350,260,200,9
+2026-03-04,AI Course,Facebook Ads,6,1800,1500,520,6
+2026-03-04,AI Course,Google Ads,4,1200,1100,350,4
+2026-03-04,AI Toolkit,Direct,10,1500,250,210,10
+2026-03-05,AI Course,Facebook Ads,9,2700,1500,640,9
+2026-03-05,AI Course,Google Ads,6,1800,1100,470,6
+2026-03-05,AI Toolkit,Direct,11,1650,260,230,11
+2026-03-06,AI Course,Facebook Ads,12,3600,1500,780,12
+2026-03-06,AI Course,Google Ads,8,2400,1100,520,8
+2026-03-06,AI Toolkit,Direct,12,1800,280,260,12
+2026-03-07,AI Course,Facebook Ads,17,5100,1700,1120,17
+2026-03-07,AI Course,Google Ads,13,3900,1200,800,13
+2026-03-07,AI Toolkit,Direct,15,2250,420,310,15
+2026-03-08,AI Course,Facebook Ads,18,5400,1700,1200,18
+2026-03-08,AI Course,Google Ads,14,4200,1200,820,14
+2026-03-08,AI Toolkit,Direct,17,2550,450,340,17
