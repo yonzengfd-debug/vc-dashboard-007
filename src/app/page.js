@@ -1,6 +1,8 @@
+'use client';
+
 import { useEffect, useState, useMemo } from 'react';
 import Papa from 'papaparse';
-import { dataService } from './services/dataService';
+import { dataService } from '@/services/dataService';
 import { 
   DollarSign, 
   ShoppingCart, 
@@ -35,7 +37,7 @@ import {
   Cell,
 } from 'recharts';
 
-export default function App() {
+export default function Dashboard() {
   const [rawData, setRawData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [aiLoading, setAiLoading] = useState(false);
@@ -149,7 +151,7 @@ export default function App() {
 
   // AI Insight Generation
   const generateAiInsights = async () => {
-    const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+    const apiKey = process.env.NEXT_PUBLIC_GEMINI_API_KEY;
     if (!apiKey || apiKey === 'your_gemini_api_key_here') {
       setApiKeyError(true);
       return;
@@ -346,12 +348,6 @@ Only return the JSON.`;
           <div className="lg:col-span-2">
             <ChartContainer title="Revenue Trend" icon={<LineChartIcon className="w-4 h-4" />}>
               <LineChart data={trendData}>
-                <defs>
-                  <linearGradient id="colorRevenue" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="5%" stopColor="#6366f1" stopOpacity={0.1}/>
-                    <stop offset="95%" stopColor="#6366f1" stopOpacity={0}/>
-                  </linearGradient>
-                </defs>
                 <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#f1f5f9" />
                 <XAxis 
                   dataKey="date" 
@@ -370,13 +366,6 @@ Only return the JSON.`;
                   contentStyle={{ borderRadius: '12px', border: 'none', boxShadow: '0 4px 12px rgba(0,0,0,0.1)', fontSize: '12px' }}
                   formatter={(value) => [`$${value.toLocaleString()}`, 'Revenue']}
                 />
-                <Area 
-                  type="monotone" 
-                  dataKey="revenue" 
-                  stroke="none" 
-                  fillOpacity={1} 
-                  fill="url(#colorRevenue)" 
-                />
                 <Line 
                   type="monotone" 
                   dataKey="revenue" 
@@ -389,7 +378,6 @@ Only return the JSON.`;
             </ChartContainer>
           </div>
 
-          {/* Revenue by Channel */}
           <ChartContainer title="Revenue by Channel" icon={<PieChartIcon className="w-4 h-4" />}>
             <BarChart data={channelData} layout="vertical">
               <CartesianGrid strokeDasharray="3 3" horizontal={false} stroke="#f1f5f9" />
@@ -483,7 +471,7 @@ Only return the JSON.`;
                     <div>
                       <p className="text-[10px] font-bold text-rose-400 uppercase tracking-wider">API Key Required</p>
                       <p className="text-[10px] text-rose-300/60 mt-0.5 leading-tight">
-                        Add <code className="bg-black/30 px-1 py-0.5 rounded text-white">VITE_GEMINI_API_KEY</code> to your <code className="bg-black/30 px-1 py-0.5 rounded text-white">.env</code> file.
+                        Add <code className="bg-black/30 px-1 py-0.5 rounded text-white">NEXT_PUBLIC_GEMINI_API_KEY</code> to your environment variables.
                       </p>
                     </div>
                   </div>
@@ -642,4 +630,3 @@ Only return the JSON.`;
     </div>
   );
 }
-

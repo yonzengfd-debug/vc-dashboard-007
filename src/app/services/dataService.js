@@ -7,7 +7,7 @@ export const dataService = {
    * @returns {Promise<Array>} Array of sales data objects.
    */
   async fetchSalesData() {
-    const dataSource = process.env.NEXT_PUBLIC_DATA_SOURCE || 'csv';
+    const dataSource = import.meta.env.VITE_DATA_SOURCE || 'csv';
 
     // 1. Try fetching from Supabase if explicitly requested
     if (dataSource === 'supabase' && supabase) {
